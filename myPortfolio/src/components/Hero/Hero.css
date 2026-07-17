@@ -1,0 +1,125 @@
+.hero {
+  background: linear-gradient(to right, var(--bg-primary), var(--bg-secondary));
+  text-align: center;
+}
+
+.hero .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.hero-content {
+  flex: 1;
+  min-width: 300px;
+  text-align: left;
+  padding-right: 30px;
+}
+
+.hero-title {
+  font-size: 3.0rem;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeIn 1s forwards 0.5s;
+}
+
+.hero-description {
+  margin-bottom: 30px;
+  opacity: 0;
+  animation: fadeIn 1s forwards 1.5s;
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+.cta-button {
+  padding: 12px 30px;
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: var(--transition);
+  cursor: pointer;
+  opacity: 0;
+  animation: fadeIn 1s forwards 2s;
+}
+
+.cta-button:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hero-image {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+  position: relative;
+}
+
+.image-placeholder {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, var(--accent), #ff7e5f);
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.glow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, transparent 30%, var(--accent) 150%);
+  opacity: 0.5;
+  animation: pulse 3s infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-content {
+    flex: 100%;
+    padding-right: 0;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-image {
+    flex: 100%;
+  }
+  
+  .image-placeholder {
+    width: 250px;
+    height: 250px;
+  }
+}

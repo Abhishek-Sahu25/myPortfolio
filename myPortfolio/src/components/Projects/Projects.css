@@ -1,0 +1,35 @@
+.achievement-card.certification {
+  border-top: 4px solid #64ffda;
+}
+
+.achievement-card.leadership {
+  border-top: 4px solid #ffd93d;
+}
+
+.achievement-card.achievement {
+  border-top: 4px solid #6c5ce7;
+}
+
+.achievement-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.achievement-badge.certification {
+  background: #64ffda;
+  color: #1a1a2e;
+}
+
+.achievement-badge.leadership {
+  background: #ffd93d;
+  color: #1a1a2e;
+}
+
+.achievement-badge.achievement {
+  background: #6c5ce7;
+  color: white;
+}
